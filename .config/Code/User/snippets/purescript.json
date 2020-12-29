@@ -1,0 +1,62 @@
+{
+	// Place your snippets for purescript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"ReaderTMonad": {
+		"prefix": "readertmonad",
+		"body": [
+		  "module ${1:Application.Effect} where",
+		  "",
+		  "import Prelude",
+		  "import Control.Monad.Except.Trans (ExceptT, runExceptT)",
+		  "import Control.Monad.Reader (runReaderT)",
+		  "import Control.Monad.Reader.Trans (ReaderT)",
+		  "import Data.Either (Either(..))",
+		  "import Effect (Effect)",
+		  "import Effect.Class (class MonadEffect)",
+		  "import Effect.Console (log)",
+		  "import Server.User.Types (Error, Environment)",
+		  "",
+		  "newtype ${2:ApplicationEffect} a",
+		  "  = $2 (ReaderT Environment (ExceptT Error Effect) a)",
+		  "",
+		  "run$2 :: Environment -> $2 String -> Effect Unit",
+		  "run$2 env ($2 m) =",
+		  "  runExceptT (runReaderT m env)",
+		  "    >>= case _ of",
+		  "        Left e -> log $ show e",
+		  "        Right a -> log a",
+		  "",
+		  "derive newtype instance functor$2 :: Functor $2",
+		  "derive newtype instance apply$2 :: Apply $2",
+		  "derive newtype instance applicative$2 :: Applicative $2",
+		  "derive newtype instance bind$2 :: Bind $2",
+		  "derive newtype instance monad$2 :: Monad $2",
+		  "derive newtype instance monadEffect$2 :: MonadEffect $2"
+		],
+		"description": "ReaderTMonad"
+	},
+	"CapabilityModule": {
+	"prefix": "capabilityModule",
+	"body": [
+		"module ${1:User}.Capability where",
+		"",
+		"import Prelude",
+		"",
+		"class",
+		"  Monad m <= ${2:Application}Monad m where",
+		"  create :: String -> m String"
+	],
+	"description": "Capability"
+	}
+}

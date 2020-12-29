@@ -1,0 +1,63 @@
+{
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  "markdown-shell-code-block": {
+    "scope": "markdown",
+    "prefix": "sh",
+    "body": ["```sh", "$0", "```", ""],
+    "description": "Shell code block"
+  },
+  "markdown-purescript-code-block": {
+    "scope": "markdown",
+    "prefix": "ps",
+    "body": ["```purescript", "$0", "```", ""],
+    "description": "PureScript code block"
+  },
+  "markdown-json-code-block": {
+    "scope": "markdown",
+    "prefix": "json",
+    "body": ["```json", "$0", "```", ""],
+    "description": "Json code block"
+  },
+  "markdown-javascript-code-block": {
+    "scope": "markdown",
+    "prefix": "js",
+    "body": ["```javascript", "$0", "```", ""],
+    "description": "JavaScript code block"
+  },
+  "markdown-typescript-code-block": {
+    "scope": "markdown",
+    "prefix": "ts",
+    "body": ["```typescript", "$0", "```", ""],
+    "description": "TypeScript code block"
+  },
+  "markdown-cf": {
+    "scope": "markdown",
+    "prefix": "cf",
+    "body": ["[(cf. )]($0)"],
+    "description": "compare ..."
+  },
+  "markdown-file": {
+    "scope": "markdown",
+    "prefix": "file",
+    "body": ["[${CLIPBOARD}](./${CLIPBOARD})"],
+    "description": "file-link - enter '`./filename', copy 'filename', apply snippet"
+  },
+  "markdown-cite": {
+    "scope": "markdown",
+    "prefix": "cite",
+    "body": ["[(${1:author}, ${2:YYYY})]($CLIPBOARD)"],
+    "description": "cite"
+  },
+  "markdown-link": {
+    "scope": "markdown",
+    "prefix": "link",
+    "body": ["[$CLIPBOARD]($CLIPBOARD)"],
+    "description": "cite"
+  }
+}

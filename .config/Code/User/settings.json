@@ -1,0 +1,209 @@
+{
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmDelete": false,
+  "genGetSet.ignoredDictionaryList": ["vscode", "tsconfig"],
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "export-typescript.excludes": ["**/*.{spec.ts,spec.tsx}"],
+  "export-typescript.includes": ["**/*.{ts,tsx}", "*/index.{ts,tsx}"],
+  "export-typescript.exportStar": true,
+  "files.autoSave": "onFocusChange",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDragAndDrop": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "files.associations": {
+    "**/files/**/*": "plaintext"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "cSpell.userWords": [
+    "Eagery",
+    "Plainionist",
+    "Semigroup",
+    "Serializability",
+    "Steyer",
+    "Typegoose",
+    "cqrs",
+    "dtos",
+    "esbenp",
+    "forall",
+    "marblejs",
+    "mariadb",
+    "middlewares",
+    "mkdir",
+    "mongod",
+    "mscolnick",
+    "nestjs",
+    "newtype",
+    "ngrx",
+    "nrwl",
+    "pipeable",
+    "prettierrc",
+    "purescript",
+    "purs",
+    "purty",
+    "spago",
+    "submodule",
+    "submodules",
+    "typeorm",
+    "websockets"
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "markdown.extension.orderedList.marker": "one",
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "editor.cursorBlinking": "solid",
+  "editor.formatOnType": false,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.addMissingImports": false,
+    "source.fixAll": true
+  },
+  "auto-close-tag.SublimeText3Mode": true,
+  "html.autoClosingTags": false,
+  "open-file-from-path.regExp": "[`]([^`]+)['`]",
+  "open-file-from-path.searchExclusion": [
+    "**/node_modules/**",
+    "**/.vscode/**",
+    "**/dist/**",
+    "**/.spago/**",
+    "**/.psci_modules/**"
+  ],
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "npm-intellisense.showBuildInLibs": true,
+  "typescript.preferences.quoteStyle": "single",
+  "prettier.singleQuote": true,
+  "files.exclude": {
+    "**/*.spec.ts": true,
+    "**/node_modules": true,
+    "**/output": true
+  },
+  "search.exclude": {
+    "**/.cache": true,
+    "**/.spago": true,
+    "yarn.lock": true
+  },
+  "git.enabled": false,
+  "git.path": null,
+  "git.autofetch": false,
+  "sendtoterminalplus.languages": [
+    {
+      "langId": "default",
+      "delayMode": "default",
+      "payloadFormat": "default",
+      "linePattern": "{line}",
+      "noSelectionPayload": [
+        "{currentline}"
+      ],
+      "oneLineSelectionPayload": [
+        "{selection}"
+      ],
+      "multiLineSelectionPayload": [
+        "{selection}"
+      ]
+    },
+    {
+      "langId": "purescript",
+      "delayMode": "default",
+      "payloadFormat": "chunk",
+      "linePattern": "{line}",
+      "noSelectionPayload": [
+        "{currentline}"
+      ],
+      "oneLineSelectionPayload": [
+        "{selection}"
+      ],
+      "multiLineSelectionPayload": [
+        ":paste",
+        "{selection}",
+        "\u0004"
+      ]
+    },
+    {
+      "langId": "haskell",
+      "delayMode": "default",
+      "payloadFormat": "chunk",
+      "linePattern": "{line}",
+      "noSelectionPayload": [
+        "{currentline}"
+      ],
+      "oneLineSelectionPayload": [
+        "{selection}"
+      ],
+      "multiLineSelectionPayload": [
+        ":{",
+        "{selection}",
+        ":}"
+      ]
+    },
+    {
+      "langId": "python",
+      "delayMode": "default",
+      "payloadFormat": "chunk",
+      "linePattern": "{line}",
+      "noSelectionPayload": [
+        "{currentline}"
+      ],
+      "oneLineSelectionPayload": [
+        "{selection}"
+      ],
+      "multiLineSelectionPayload": [
+        "{selection}",
+        ""
+      ]
+    }
+  ],
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "git-commit",
+    "go",
+    "graphql",
+    "handlebars",
+    "haskell",
+    "html",
+    "jade",
+    "java",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "latex",
+    "less",
+    "markdown",
+    "php",
+    "plaintext",
+    "python",
+    "pug",
+    "restructuredtext",
+    "rust",
+    "scala",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+    "yml",
+    "purescript"
+  ],
+  "cSpell.enableFiletypes": [
+    "!typescript"
+  ],
+  "files.watcherExclude": {
+    "**/.output/**": true,
+    "**/.spago/**": true
+  },
+}

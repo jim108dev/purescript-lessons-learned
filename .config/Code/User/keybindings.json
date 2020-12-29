@@ -1,0 +1,34 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "ctrl+alt+w",
+    "command": "workbench.action.closeOtherEditors"
+  },
+  {
+    "key": "ctrl+alt+down",
+    "command": "extension.arrowBackBtn"
+  },
+  {
+    "key": "ctrl+alt+up",
+    "command": "extension.arrowForwardBtn"
+  },
+  {
+    "key": "ctrl+alt+enter",
+    "command": "extension.sendToTerminalPlus",
+    "when": "editorFocus && !findWidgetVisible"
+  },
+  {
+    "key": "shift+alt+enter",
+    "command": "-extension.sendToTerminalPlus",
+    "when": "editorFocus && !findWidgetVisible"
+  },
+  {
+    "key": "ctrl+alt+f",
+    "command": "extension.openFileFromPath",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+c",
+    "command": "-apexsql.server-explorer.connect"
+  }
+]

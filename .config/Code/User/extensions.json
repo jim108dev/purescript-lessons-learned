@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "2gua.rainbow-brackets",
+    "nick-rudenko.back-n-forth",
+    "redvanworkshop.explorer-exclude-vscode-extension",
+    "jim108dev.open-file-from-path",
+    "nwolverson.ide-purescript",
+    "nwolverson.language-purescript",
+    "ivoh.sendtoterminalplus",
+    "mtxr.sqltools",
+    "mtxr.sqltools-driver-mysql",
+    "mtxr.sqltools-driver-pg",
+    "davidanson.vscode-markdownlint",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}
