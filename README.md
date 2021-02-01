@@ -12,4 +12,4 @@ This is a learning project in order to summarize the insides gained from several
 1. View/review contents at [LESSONS-LEARNED.md](./LESSONS-LEARNED.md).
 1. Backup/Restore user config with:
    1. `make backup`: Copies user config files to local repo folder.
-   1. `make restore`: Does the reverse.
+   1. `make restore`: Replaces config files at local PC.

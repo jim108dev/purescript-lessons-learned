@@ -9,6 +9,8 @@ This is a learning project in order to summarize the insides gained from several
   - [Development](#development)
     - [Useful Extensions](#useful-extensions)
     - [PureScript Installation](#purescript-installation)
+    - [Source code file and folder structure](#source-code-file-and-folder-structure)
+    - [Setting up a new Project](#setting-up-a-new-project)
   - [Version control](#version-control)
     - [Set git config](#set-git-config)
     - [Check out projects with submodules](#check-out-projects-with-submodules)
@@ -39,8 +41,8 @@ This is a learning project in order to summarize the insides gained from several
    1. "yzhang.markdown-all-in-one": For auto table of context generation.
 
 1. Repository documentation:
-   1. `README.md` convention: The readme file of a project should normally have a little abstract of *what* and *why*, followed by *Install*, *Usage* and *Development* with a link to the 'steps' file. A template can be found under `TEMPLATE-README.md`.
-   1. `<REPOSITORY-SHORTNAME>-STEPS.md`: This files contains the *Steps for Reproduction*. A template can be found under `TEMPLATE-STEPS.md`.
+   1. `README.md` convention: The readme file of a project should normally have a little abstract of *what* and *why*, followed by *Install*, *Usage* and *Development* with a link to the 'steps' file. A template can be found under `README-TEMPLATE.md`.
+   1. `<REPOSITORY-SHORTNAME>-STEPS.md`: This files contains the *Steps for Reproduction*. A template can be found under `STEPS-TEMPLATE.md`.
 
 ## Development
 
@@ -77,6 +79,42 @@ General information is given by [Getting Started with PureScript](https://github
    sudo cat purty-fix.js > ~/bin/purty
    ```
 
+### Source code file and folder structure
+
+1. The general source code file and folder structure is `<src-folder>/<app>/<domain>/<layer>/<file>`.
+    1. `<src-folder>`:
+        1. `sql`: Contains sql scripts for development and database setup.
+        1. `src`: PureScript and JavaScript development source files.
+        1. `test`: Test cases.
+    1. `<app>`:
+        1. `Client`: Code which is only used in the client application. (Not implemented yet)
+        1. `Server`: Code which is only used in the server application.
+        1. `Shared`: Code which can be used by all apps.
+    1. `<domain>`:
+        1. `Shell`: For the entry point of the application and to direct to other domains. `Shell` can depend on other domains. Other domains cannot depend on `Shell`
+        1. `User`: User domain code.
+        1. `Shared`: Code which can be used by all domains. Other domains can depend on `Shared`. `Shared` cannot depend on other domains.
+    1. `<layer>`:
+        1. `Api`: Entry, exit points of requests and validation logic.
+        1. `Application`: Business application layer. Layers which rely on effects can only be used with interfaces. If there is no business logic, the layer is omitted.
+        1. `Interface`: Interfaces for persistence or application functions.
+        1. `Persistence`: Persistence/storage/database layer.
+        1. `Util`: Holds util functions which can be used in every layer.
+    1. `<file>`: If there can be multiple implementations of the same layer, a distinct name is used. `Main.purs` refers to the general implementation/entrance point of a folder. `Types.purs` holds all data types, constructor functions, class and instance declarations.
+1. The handle pattern was used for dependency injection following the description of [(Van der Jeugt, 2018)](https://jaspervdj.be/posts/2018-03-08-handle-pattern.html).
+1. The source code is written for qualified import, which is also described by [(Van der Jeugt, 2018)](https://jaspervdj.be/posts/2018-03-08-handle-pattern.html).
+
+### Setting up a new Project
+
+1. `github.com`: Create new repository with README, "PureScript" `.gitignore` and MIT License.
+1. Clone project. Change into folder.
+1. Init
+
+   ```sh
+   spago init
+   spago run
+   ```
+
 ## Version control
 
 ### Set git config
@@ -88,13 +126,13 @@ git config --global --edit
 ### Check out projects with submodules
 
 ```sh
-git clone --recurse-submodules https://github.com/jim108dev/<name>
+git clone --recurse-submodules https://github.com/jim108dev/...
 ```
 
 ## Add submodules
 
 ```sh
-git submodule add https://github.com/jim108dev/nx-chat
+git submodule add https://github.com/jim108dev/...
 ```
 
 ### Push changes

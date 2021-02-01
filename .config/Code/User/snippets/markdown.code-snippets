@@ -18,6 +18,12 @@
     "body": ["```purescript", "$0", "```", ""],
     "description": "PureScript code block"
   },
+  "markdown-haskell-code-block": {
+    "scope": "markdown",
+    "prefix": "hs",
+    "body": ["```haskell", "$0", "```", ""],
+    "description": "Haskell code block"
+  },
   "markdown-json-code-block": {
     "scope": "markdown",
     "prefix": "json",

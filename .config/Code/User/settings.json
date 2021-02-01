@@ -4,9 +4,6 @@
   },
   "explorer.confirmDelete": false,
   "genGetSet.ignoredDictionaryList": ["vscode", "tsconfig"],
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "export-typescript.excludes": ["**/*.{spec.ts,spec.tsx}"],
   "export-typescript.includes": ["**/*.{ts,tsx}", "*/index.{ts,tsx}"],
   "export-typescript.exportStar": true,
@@ -19,16 +16,27 @@
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "cSpell.userWords": [
+    "Affjax",
+    "Bifunctor",
+    "Dotenv",
     "Eagery",
     "Plainionist",
+    "Postgres",
+    "Queryable",
     "Semigroup",
     "Serializability",
     "Steyer",
     "Typegoose",
+    "bimap",
+    "concat",
     "cqrs",
+    "deinit",
     "dtos",
     "esbenp",
+    "favorited",
+    "followee",
     "forall",
+    "lmap",
     "marblejs",
     "mariadb",
     "middlewares",
@@ -48,6 +56,9 @@
     "submodule",
     "submodules",
     "typeorm",
+    "unfollow",
+    "unformat",
+    "unprocessable",
     "websockets"
   ],
   "[jsonc]": {
@@ -60,7 +71,6 @@
   "editor.cursorBlinking": "solid",
   "editor.formatOnType": false,
   "editor.formatOnPaste": false,
-  "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.codeActionsOnSave": {
     "source.organizeImports": true,
@@ -69,7 +79,7 @@
   },
   "auto-close-tag.SublimeText3Mode": true,
   "html.autoClosingTags": false,
-  "open-file-from-path.regExp": "[`]([^`]+)['`]",
+  "open-file-from-path.regExp": "[\"`]([^`\"]+)['`\"]",
   "open-file-from-path.searchExclusion": [
     "**/node_modules/**",
     "**/.vscode/**",
@@ -89,8 +99,8 @@
     "**/output": true
   },
   "search.exclude": {
+    ".spago": true,
     "**/.cache": true,
-    "**/.spago": true,
     "yarn.lock": true
   },
   "git.enabled": false,
@@ -206,4 +216,14 @@
     "**/.output/**": true,
     "**/.spago/**": true
   },
+  "window.zoomLevel": 0,
+  "sqltools.queryParams.enableReplace": true,
+  "sql-formatter.uppercase": true,
+  "[sql]": {
+    "editor.defaultFormatter": "bradymholt.pgformatter"
+  },
+  "pgFormatter.spaces": 2,
+  "vscode-mysql.enableDelimiter": true,
+  "search.searchOnType": false,
+ 
 }

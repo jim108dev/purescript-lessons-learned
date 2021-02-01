@@ -39,7 +39,7 @@ purty.stdout.on('data', (data) => {
      * _
      *  | 
     */
-    console.log(text);
+    process.stdout.write(text);
 });
 
 purty.on('close', function (code) { process.exit(code); });
