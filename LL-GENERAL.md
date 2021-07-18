@@ -8,6 +8,9 @@ This is a learning project in order to summarize the insides gained from several
   - [Documentation](#documentation)
   - [Development](#development)
     - [Useful Extensions](#useful-extensions)
+  - [Command line](#command-line)
+    - [Add to Fish PATH](#add-to-fish-path)
+    - [Delete from Fish Path](#delete-from-fish-path)
   - [Version control](#version-control)
     - [Set git config](#set-git-config)
     - [Check out projects with submodules](#check-out-projects-with-submodules)
@@ -51,6 +54,23 @@ This is a learning project in order to summarize the insides gained from several
 3. "jim108dev.open-file-from-path": [vscode-open-file-from-path](https://github.com/jim108dev/vscode-open-file-from-path) Place the cursor of a file in markdown like `README.md` and press `CTRL+ALT+f` to go to that file.
 4. "ivoh.sendtoterminalplus": Use with `spago repl` to paste lines to the terminal with `CTRL+ALT+Enter`.
 5. "mtxr.sqltools","mtxr.sqltools-driver-mysql","mtxr.sqltools-driver-pg": SQL Tools
+
+## Command line
+
+### Add to Fish PATH
+
+```sh
+set -U fish_user_paths /usr/local/bin $fish_user_paths
+```
+
+
+### Delete from Fish Path
+
+```sh
+# List paths
+echo $fish_user_paths | tr " " "\n" | nl
+set --erase --universal fish_user_paths[1]
+```
 
 ## Version control
 

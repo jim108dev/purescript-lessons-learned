@@ -5,6 +5,7 @@ This is a learning project in order to summarize the insides gained from several
 - [Lessons Learned](#lessons-learned)
   - [Working environment](#working-environment)
     - [SDK](#sdk)
+    - [Add to Fish PATH](#add-to-fish-path)
   - [VS Code Extensions](#vs-code-extensions)
 
 ## Working environment
@@ -47,6 +48,13 @@ Source: [Native SDK install on Linux](https://willow.systems/blog/pebble-sdk-ins
    pebble sdk install latest
    ```
 
+### Add to Fish PATH
+
+```sh
+set -U fish_user_paths ~/opt/pebble-dev/pebble-sdk-4.6-rc2-linux64/bin $fish_user_paths
+echo $PATH
+```
+
 ## VS Code Extensions
 
 1. "willowsystems.pebble-tool": Run command from the UI. Seams to work only with a single workspace.
@@ -58,3 +66,15 @@ Source: [Native SDK install on Linux](https://willow.systems/blog/pebble-sdk-ins
       "~/.pebble-sdk/SDKs/4.3/sdk-core/pebble/aplite/include/**",
       "${workspaceFolder}/**"
       ],
+
+## Development
+
+### Build and deploy
+
+```sh
+pebble build
+# On the emulator
+pebble install --emulator=aplite
+# On the device
+pebble install --serial /dev/rfcomm0
+```
