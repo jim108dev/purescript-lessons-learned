@@ -8,9 +8,6 @@ This is a learning project in order to summarize the insides gained from several
   - [Documentation](#documentation)
   - [Development](#development)
     - [Useful Extensions](#useful-extensions)
-    - [PureScript Installation](#purescript-installation)
-    - [Source code file and folder structure](#source-code-file-and-folder-structure)
-    - [Setting up a new Project](#setting-up-a-new-project)
   - [Version control](#version-control)
     - [Set git config](#set-git-config)
     - [Check out projects with submodules](#check-out-projects-with-submodules)
@@ -61,6 +58,8 @@ This is a learning project in order to summarize the insides gained from several
 
 ```sh
 git config --global --edit
+# Maybe reset password
+git config --global --unset user.password
 ```
 
 ### Check out projects with submodules
